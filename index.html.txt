@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="بردیا شکوری فرد - مهندس پرامپت و طراح محتوای خلاق با هوش مصنوعی">
+    <title>بردیا شکوری - AI Prompt Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+```
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #333;
+        line-height: 1.8;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    header {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        margin-bottom: 30px;
+        text-align: center;
+        animation: fadeInDown 0.8s ease;
+    }
+
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    h1 {
+        font-size: 2.5em;
+        color: #667eea;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+
+    .subtitle {
+        font-size: 1.3em;
+        color: #764ba2;
+        margin-bottom: 20px;
+        font-weight: 500;
+    }
+
+    .contact-info {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        font-size: 0.95em;
+    }
+
+    .contact-info a {
+        color: #667eea;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .contact-info a:hover {
+        color: #764ba2;
+    }
+
+    nav {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 15px;
+        margin-bottom: 30px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    nav button {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        margin: 5px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 1em;
+        font-weight: 600;
+        transition: all 0.3s;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    }
+
+    nav button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+    }
+
+    nav button.active {
+        background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    }
+
+    section {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 40px;
+        border-radius: 20px;
+        margin-bottom: 30px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        display: none;
+        animation: slideIn 0.5s ease;
+    }
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateX(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    section.active {
+        display: block;
+    }
+
+    h2 {
+        color: #667eea;
+        font-size: 2em;
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+        border-bottom: 3px solid #764ba2;
+    }
+
+    .about-content {
+        font-size: 1.1em;
+        line-height: 2;
+        color: #555;
+    }
+
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        margin-top: 30px;
+    }
+
+    .skill-card {
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .skill-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(102, 126, 234, 0.3);
+    }
+
+    .skill-card h3 {
+        color: #764ba2;
+        margin-bottom: 15px;
+        font-size: 1.3em;
+    }
+
+    .skill-card ul {
+        list-style: none;
+        padding-right: 0;
+    }
+
+    .skill-card li {
+        padding: 8px 0;
+        color: #555;
+        position: relative;
+        padding-right: 20px;
+    }
+
+    .skill-card li:before {
+        content: "✓";
+        position: absolute;
+        right: 0;
+        color: #667eea;
+        font-weight: bold;
+    }
+
+    .experience-item {
+        background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        padding: 25px;
+        border-radius: 15px;
+        margin-bottom: 25px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+    }
+
+    .experience-item:hover {
+        transform: translateX(-5px);
+    }
+
+    .experience-item h3 {
+        color: #764ba2;
+        font-size: 1.4em;
+        margin-bottom: 10px;
+    }
+
+    .experience-item .period {
+        color: #667eea;
+        font-weight: 600;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 30px;
+        margin-top: 30px;
+    }
+
+    .portfolio-item {
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s;
+        border: 3px solid transparent;
+    }
+
+    .portfolio-item:hover {
+        transform: translateY(-10px);
+        border-color: #667eea;
+        box-shadow: 0 15px 40px rgba(102, 126, 234, 0.3);
+    }
+
+    .portfolio-item h3 {
+        color: #764ba2;
+        margin-bottom: 15px;
+        font-size: 1.3em;
+    }
+
+    .portfolio-item p {
+        color: #666;
+        line-height: 1.8;
+        margin-bottom: 10px;
+        text-align: right;
+    }
+
+    .portfolio-item strong {
+        color: #667eea;
+    }
+
+    .media-container {
+        margin: 20px 0;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .media-container img,
+    .media-container video {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .image-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+        margin: 15px 0;
+    }
+
+    .image-gallery img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+
+    .image-gallery img:hover {
+        transform: scale(1.05);
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 10px;
+    }
+
+    .close-modal {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        color: white;
+        font-size: 40px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .download-btn {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 1em;
+        font-weight: 600;
+        margin-top: 20px;
+        transition: all 0.3s;
+        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    }
+
+    .download-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+    }
+
+    footer {
+        text-align: center;
+        color: white;
+        padding: 30px;
+        margin-top: 50px;
+        font-size: 0.95em;
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 1.8em;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+        }
+
+        section {
+            padding: 25px;
+        }
+
+        .contact-info {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .portfolio-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+```
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>بردیا شکوری فرد</h1>
+            <p class="subtitle">AI Prompt Engineer & Creative Content Designer</p>
+            <div class="contact-info">
+                <a href="mailto:Shakouribardia@gmail.com">📧 Shakouribardia@gmail.com</a>
+                <span>📞 09385209330</span>
+                <span>📍 تهران، کوی بیمه</span>
+            </div>
+        </header>
+
+```
+    <nav>
+        <button class="nav-btn active" onclick="showSection('about')">درباره من</button>
+        <button class="nav-btn" onclick="showSection('skills')">مهارت‌ها</button>
+        <button class="nav-btn" onclick="showSection('experience')">سوابق</button>
+        <button class="nav-btn" onclick="showSection('portfolio')">نمونه‌کارها</button>
+    </nav>
+
+    <section id="about" class="active">
+        <h2>درباره من</h2>
+        <div class="about-content">
+            <p>مهندس پرامپت و متخصص هوش مصنوعی هستم که در استفاده از ابزارهای AI برای خلق راه‌حل‌های محتوایی نوآورانه تخصص دارم. من پل ارتباطی بین فناوری و خلاقیت انسانی هستم و با استفاده از ساختار پرامپت‌های قدرتمند و نگاه سیستمی، با تست و ارزیابی مستمر پرامپت‌ها در مدل‌های مختلف، ایده‌های پیچیده را به خروجی‌های دقیق و کاربردی در مدل‌های زبانی (ChatGPT، Claude، Gemini و...) تبدیل می‌کنم.</p>
+            <p style="margin-top: 20px;">تمرکز من بر خلق راه‌حل‌های محتوایی نوآورانه با استفاده از ابزارهای هوش مصنوعی است؛ جایی که کلمه، تصویر و منطق در یک گفت‌وگوی زنده با تکنولوژی معنا پیدا می‌کنند.</p>
+            <p style="margin-top: 20px;"><strong>تحصیلات:</strong> کارشناسی اقتصاد، دانشگاه تهران (۱۳۹۹-۱۴۰۵) | مدال نقره المپیاد ادبیات (۱۳۹۸)</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>مهارت‌های من</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>🎯 مهارت‌های تخصصی</h3>
+                <ul>
+                    <li>مهندسی پرامپت و طراحی گفت‌وگو</li>
+                    <li>تست و ارزیابی پرامپت بین‌مدلی</li>
+                    <li>تولید و ویرایش محتوا با AI</li>
+                    <li>کار با مدل‌های زبانی بزرگ</li>
+                    <li>تولید محتوای چندرسانه‌ای</li>
+                    <li>استراتژی محتوا و SEO</li>
+                    <li>کپی‌رایتینگ و ویراستاری فنی</li>
+                    <li>طراحی محتوای بصری و آموزشی</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>🤖 ابزارهای AI</h3>
+                <ul>
+                    <li>ChatGPT</li>
+                    <li>Claude</li>
+                    <li>Gemini</li>
+                    <li>Grok</li>
+                    <li>Canva AI</li>
+                    <li>Gemini Image</li>
+                    <li>Runway</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>💡 مهارت‌های نرم</h3>
+                <ul>
+                    <li>تفکر تحلیلی و حل مسئله</li>
+                    <li>خلاقیت و ایده‌پردازی</li>
+                    <li>ارتباط مؤثر و انتقال مفهوم</li>
+                    <li>یادگیری سریع و انطباق‌پذیری</li>
+                    <li>مدیریت پروژه و تیم</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>سوابق شغلی</h2>
+        
+        <div class="experience-item">
+            <h3>تدریس ادبیات (المپیاد)</h3>
+            <span class="period">۱۳۹۸ - ۱۴۰۰</span>
+            <p>آموزش متون نظم و نثر کهن، شعر معاصر و ادبیات نمایشی در مدارس نمونه تهران، بابل، اصفهان و سایر شهرها. طراحی محتوای آموزشی و سناریوهای یادگیری برای دانش‌آموزان المپیاد.</p>
+        </div>
+
+        <div class="experience-item">
+            <h3>مدیر منابع انسانی - صرافی ارز دیجیتال رابینکش</h3>
+            <span class="period">بهار و تابستان ۱۴۰۰</span>
+            <p>طراحی آگهی‌های استخدامی و انجام مصاحبه‌های غیرفنی. حل مشکلات و مسائل کارمندان و انتقال نظرات به مدیریت و بالعکس.</p>
+        </div>
+
+        <div class="experience-item">
+            <h3>مشاور تحصیلی - موسسه علامه حلی</h3>
+            <span class="period">پاییز ۱۴۰۰</span>
+            <p>طراحی مسیر یادگیری و تولید محتوای متنی برای برنامه‌ریزی آموزشی. پیگیری برنامه آموزشی دانش‌آموزان و کمک برای حل مسائل ایشان.</p>
+        </div>
+
+        <div class="experience-item">
+            <h3>مشاور املاک - املاک خانه‌نما</h3>
+            <span class="period">تابستان ۱۴۰۱</span>
+            <p>طراحی آگهی‌های فروش و اجاره برای خانه‌ها. مشاوره برای خرید و فروش و اجاره.</p>
+        </div>
+
+        <div class="experience-item">
+            <h3>دبیر تحریریه و ویراستار - نشریه هشتاد</h3>
+            <span class="period">۱۳۹۶ - ۱۳۹۹</span>
+            <p>مدیریت تیم تحریریه و تولید محتوای منظم. ویراستار محتوای متنی نشریه.</p>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h2>نمونه‌کارهای من</h2>
+        
+        <div class="portfolio-grid">
+            <!-- پروژه 1: مزرعه مهتابی -->
+            <div class="portfolio-item">
+                <h3>🎬 "مزرعه مهتابی" - Image to Video</h3>
+                
+                <div class="media-container">
+                    <!-- جای ویدیوی شما - بعد از آپلود این مسیر رو عوض کنید -->
+                    <video controls poster="images/farm-poster.jpg">
+                        <source src="videos/farm-animation.mp4" type="video/mp4">
+                        مرورگر شما از ویدیو پشتیبانی نمی‌کند.
+                    </video>
+                </div>
+
+                <div class="image-gallery">
+                    <!-- تصاویر فریم به فریم - بعد از آپلود مسیرها رو عوض کنید -->
+                    <img src="images/farm-frame1.jpg" alt="فریم ۱" onclick="openModal(this)">
+                    <img src="images/farm-frame2.jpg" alt="فریم ۲" onclick="openModal(this)">
+                    <img src="images/farm-frame3.jpg" alt="فریم ۳" onclick="openModal(this)">
+                    <img src="images/farm-frame4.jpg" alt="فریم ۴" onclick="openModal(this)">
+                </div>
+
+                <p><strong>پرامپت اولیه:</strong> یک بچه گربه و یک بچه بز در حال دعوا در حیاط یک مزرعه. شب. ماه در سمت چپ و ساختمان مزرعه در سمت راست.</p>
+                <p><strong>چالش:</strong> حالت حیوانات بیش از حد دوستانه بود</p>
+                <p><strong>راه‌حل:</strong> اصلاح پرامپت - "یه کم دعوایی‌تر لطفا. شیطنتشون رو بیشتر کن"</p>
+                <p><strong>ابزارها:</strong> Gemini Image (تولید تصویر) + Grok (تبدیل به ویدیوی ۶ ثانیه‌ای)</p>
+                <p><strong>مهارت:</strong> Iterative prompting, Multi-platform workflow, Image-to-video animation</p>
+            </div>
+
+            <!-- پروژه 2: محتوای متنی -->
+            <div class="portfolio-item">
+                <h3>✍️ Cross-Model Content Testing</h3>
+                <p><strong>پروژه:</strong> طراحی و تست پرامپت‌های پیچیده در مدل‌های مختلف</p>
+                <p><strong>فرآیند کار:</strong></p>
+                <p>• طراحی پرامپت اولیه با جزئیات دقیق</p>
+                <p>• تست همزمان در ChatGPT, Claude, Gemini</p>
+                <p>• تحلیل نقاط قوت و ضعف هر مدل</p>
+                <p>• بهینه‌سازی پرامپت برای بهترین نتیجه</p>
+                <p><strong>مهارت:</strong> Prompt engineering, A/B testing, Model comparison</p>
+            </div>
+
+            <!-- پروژه 3: طراحی بصری -->
+            <div class="portfolio-item">
+                <h3>🎨 طراحی بصری سینمایی</h3>
+                <p><strong>پروژه:</strong> تولید تصاویر هنری با نورپردازی حرفه‌ای</p>
+                <p><strong>تخصص:</strong></p>
+                <p>• کنترل دقیق نورپردازی و سایه</p>
+                <p>• ترکیب‌بندی سینمایی</p>
+                <p>• کنترل احساسات و حالت کاراکترها</p>
+                <p>• توجه به جزئیات (بافت، رنگ، عمق میدان)</p>
+                <p><strong>ابزارها:</strong> Gemini Image, Canva AI, Stable Diffusion</p>
+                <p><strong>مهارت:</strong> Visual storytelling, Cinematic lighting, Character emotion control</p>
+            </div>
+
+            <!-- پروژه 4: محتوای آموزشی -->
+            <div class="portfolio-item">
+                <h3>📝 طراحی محتوای آموزشی</h3>
+                <p><strong>پروژه:</strong> تولید مسیرهای یادگیری شخصی‌سازی شده با AI</p>
+                <p><strong>تجربه:</strong></p>
+                <p>• طراحی سناریوهای آموزشی برای دانش‌آموزان المپیاد ادبیات</p>
+                <p>• تولید محتوای آموزشی تعاملی</p>
+                <p>• شخصی‌سازی مسیر یادگیری با هوش مصنوعی</p>
+                <p>• ترکیب آموزش سنتی با ابزارهای مدرن</p>
+                <p><strong>مهارت:</strong> Instructional design, Learning pathways, Personalization</p>
+            </div>
+        </div>
+
+        <button class="download-btn" onclick="window.location.href='resume.pdf'">📥 دانلود رزومه (PDF)</button>
+    </section>
+
+    <footer>
+        <p>© ۱۴۰۵ بردیا شکوری فرد - تمامی حقوق محفوظ است</p>
+        <p style="margin-top: 10px; opacity: 0.8;">ساخته شده با ❤️ و هوش مصنوعی</p>
+    </footer>
+</div>
+
+<!-- Modal برای نمایش تصاویر بزرگ -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="close-modal">&times;</span>
+    <img id="modalImage" src="" alt="تصویر بزرگ">
+</div>
+
+<script>
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('section');
+        const buttons = document.querySelectorAll('.nav-btn');
+        
+        sections.forEach(section => {
+            section.classList.remove('active');
+        });
+        
+        buttons.forEach(button => {
+            button.classList.remove('active');
+        });
+        
+        document.getElementById(sectionId).classList.add('active');
+        event.target.classList.add('active');
+    }
+
+    function openModal(img) {
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        modal.style.display = 'flex';
+        modalImg.src = img.src;
+    }
+
+    function closeModal() {
+        document.getElementById('imageModal').style.display = 'none';
+    }
+</script>
+```
+
+</body>
+</html>
+
