@@ -474,12 +474,130 @@
         <div class="experience-item">
             <h3>مشاور تحصیلی - موسسه علامه حلی</h3>
             <span class="period">پاییز ۱۴۰۰</span>
-            <p>طراحی مسیر یادگیری و تولید محتوای متنی برای برنامه‌ریزی آموزشی. پیگیری برنامه آموزشی د
-```
+            <p>طراحی مسیر یادگیری و تولید محتوای متنی برای برنامه‌ریزی آموزشی. پیگیری برنامه آموزشی دانش‌آموزان و کمک برای حل مسائل ایشان.</p>
+        </div>
+
+        <div class="experience-item">
+            <h3>مشاور املاک - املاک خانه‌نما</h3>
+            <span class="period">تابستان ۱۴۰۱</span>
+            <p>طراحی آگهی‌های فروش و اجاره برای خانه‌ها. مشاوره برای خرید و فروش و اجاره.</p>
+        </div>
+
+        <div class="experience-item">
+            <h3>دبیر تحریریه و ویراستار - نشریه هشتاد</h3>
+            <span class="period">۱۳۹۶ - ۱۳۹۹</span>
+            <p>مدیریت تیم تحریریه و تولید محتوای منظم. ویراستار محتوای متنی نشریه.</p>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h2>نمونه‌کارهای من</h2>
+        
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <h3>🎬 "مزرعه مهتابی" - Image to Video</h3>
+                
+                <div class="media-container">
+                    <video controls poster="images/farm-poster.jpg">
+                        <source src="videos/farm-animation.mp4" type="video/mp4">
+                        مرورگر شما از ویدیو پشتیبانی نمی‌کند.
+                    </video>
+                </div>
+
+                <div class="image-gallery">
+                    <img src="images/farm-frame1.jpg" alt="فریم ۱" onclick="openModal(this)">
+                    <img src="images/farm-frame2.jpg" alt="فریم ۲" onclick="openModal(this)">
+                    <img src="images/farm-frame3.jpg" alt="فریم ۳" onclick="openModal(this)">
+                    <img src="images/farm-frame4.jpg" alt="فریم ۴" onclick="openModal(this)">
+                </div>
+
+                <p><strong>پرامپت اولیه:</strong> یک بچه گربه و یک بچه بز در حال دعوا در حیاط یک مزرعه. شب. ماه در سمت چپ و ساختمان مزرعه در سمت راست.</p>
+                <p><strong>چالش:</strong> حالت حیوانات بیش از حد دوستانه بود</p>
+                <p><strong>راه‌حل:</strong> اصلاح پرامپت - "یه کم دعوایی‌تر لطفا. شیطنتشون رو بیشتر کن"</p>
+                <p><strong>ابزارها:</strong> Gemini Image (تولید تصویر) + Grok (تبدیل به ویدیوی ۶ ثانیه‌ای)</p>
+                <p><strong>مهارت:</strong> Iterative prompting, Multi-platform workflow, Image-to-video animation</p>
+            </div>
+
+            <div class="portfolio-item">
+                <h3>✍️ Cross-Model Content Testing</h3>
+                <p><strong>پروژه:</strong> طراحی و تست پرامپت‌های پیچیده در مدل‌های مختلف</p>
+                <p><strong>فرآیند کار:</strong></p>
+                <p>• طراحی پرامپت اولیه با جزئیات دقیق</p>
+                <p>• تست همزمان در ChatGPT, Claude, Gemini</p>
+                <p>• تحلیل نقاط قوت و ضعف هر مدل</p>
+                <p>• بهینه‌سازی پرامپت برای بهترین نتیجه</p>
+                <p><strong>مهارت:</strong> Prompt engineering, A/B testing, Model comparison</p>
+            </div>
+
+            <div class="portfolio-item">
+                <h3>🎨 طراحی بصری سینمایی</h3>
+                <p><strong>پروژه:</strong> تولید تصاویر هنری با نورپردازی حرفه‌ای</p>
+                <p><strong>تخصص:</strong></p>
+                <p>• کنترل دقیق نورپردازی و سایه</p>
+                <p>• ترکیب‌بندی سینمایی</p>
+                <p>• کنترل احساسات و حالت کاراکترها</p>
+                <p>• توجه به جزئیات (بافت، رنگ، عمق میدان)</p>
+                <p><strong>ابزارها:</strong> Gemini Image, Canva AI, Stable Diffusion</p>
+                <p><strong>مهارت:</strong> Visual storytelling, Cinematic lighting, Character emotion control</p>
+            </div>
+
+            <div class="portfolio-item">
+                <h3>📝 طراحی محتوای آموزشی</h3>
+                <p><strong>پروژه:</strong> تولید مسیرهای یادگیری شخصی‌سازی شده با AI</p>
+                <p><strong>تجربه:</strong></p>
+                <p>• طراحی سناریوهای آموزشی برای دانش‌آموزان المپیاد ادبیات</p>
+                <p>• تولید محتوای آموزشی تعاملی</p>
+                <p>• شخصی‌سازی مسیر یادگیری با هوش مصنوعی</p>
+                <p>• ترکیب آموزش سنتی با ابزارهای مدرن</p>
+                <p><strong>مهارت:</strong> Instructional design, Learning pathways, Personalization</p>
+            </div>
+        </div>
+
+        <a href="BardiaShakouriCV.pdf" download>
+            <button class="download-btn">📥 دانلود رزومه (PDF)</button>
+        </a>
+    </section>
+
+    <footer>
+        <p>© ۱۴۰۵ بردیا شکوری فرد - تمامی حقوق محفوظ است</p>
+        <p style="margin-top: 10px; opacity: 0.8;">ساخته شده با ❤️ و هوش مصنوعی</p>
+    </footer>
+</div>
+
+<div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="close-modal">&times;</span>
+    <img id="modalImage" src="" alt="تصویر بزرگ">
+</div>
+
+<script>
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('section');
+        const buttons = document.querySelectorAll('.nav-btn');
+        
+        sections.forEach(section => {
+            section.classList.remove('active');
+        });
+        
+        buttons.forEach(button => {
+            button.classList.remove('active');
+        });
+        
+        document.getElementById(sectionId).classList.add('active');
+        event.target.classList.add('active');
+    }
+
+    function openModal(img) {
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        modal.style.display = 'flex';
+        modalImg.src = img.src;
+    }
+
+    function closeModal() {
+        document.getElementById('imageModal').style.display = 'none';
     }
 </script>
 ```
 
 </body>
 </html>
-
